@@ -56,6 +56,8 @@ public class Chip extends RelativeLayout {
     private ImageView closeIcon;
     private ImageView selectIcon;
     private TextView chipTextView;
+    private long record_id;
+
 
     private boolean selected = false;
 
@@ -66,6 +68,20 @@ public class Chip extends RelativeLayout {
 
     public Chip(Context context) {
         this(context, null, 0);
+    }
+    
+    public void setRecordId(long record_id){
+       this.record_id=record_id;
+    }
+    
+    public long getRecordId(){
+       return record_id;
+    }
+    
+
+    
+    public TextView getChipTextView(){
+       return chipTextView;
     }
 
     public Chip(Context context, AttributeSet attrs) {
